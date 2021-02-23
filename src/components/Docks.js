@@ -16,7 +16,7 @@ import trash from './images/trash.png'
  const Docks = () => {
     return (
         <div className="Dcontain">
-            <Dock className="docks" width={600} magnification={0.9} magnifyDirection="up">
+            <Dock className="docks" width={600} magnification={1} magnifyDirection="up">
              {[finder,preview, appstore, atom, slack, chrome,terminal,spotify,steam,guitarpro,settings,trash].map((item, index) => (
               <Dock.Item className="DockItems"  key={index} onClick={() => console.log(item)}>
              <img  src={item} />

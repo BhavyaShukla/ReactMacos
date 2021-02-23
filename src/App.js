@@ -3,10 +3,11 @@ import Docks from './components/Docks'
 function App() {
   return (
     <div className="App">
-    <div className="container">
-    <Mwindow className="Mwin"/>
+      <nav>Nav</nav>
+      <div className="Mwin1"><Mwindow /></div>
+    <div className="Mwin2"><Mwindow /></div>
+    
     <Docks/>
-    </div>
     </div>
   );
 }
