@@ -56,6 +56,15 @@ nav {
   width: 6em;
   justify-content: space-evenly;
 }
+.flayout.active{
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+  height: 5em;
+  width: 6em;
+  justify-content: space-evenly;
+  border:2px solid blue;
+}
 .folder {
   border-radius: 3px;
 }
@@ -78,10 +87,10 @@ nav {
   /* flex-flow: no-wrap; */
   transition: 0.3s ease-in-out;
   position: fixed;
-  bottom: 80px;
+  bottom: 14px;
   left: 28%;
   z-index: 2;
-
+  
 }
 
 .DockItems img {
@@ -92,6 +101,7 @@ nav {
   
 }
 
+
 .DockItems img:hover {
   height: 80px;
   width: 80px;
@@ -101,7 +111,7 @@ nav {
   height: 70px;
   background-color: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(2px);
-  bottom:75px;
+  bottom:8px;
   
   left: 25%;
   right: 0;
@@ -113,3 +123,17 @@ nav {
 }
 
 /* dock items close */
+/* page loading */
+.cimginp{
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 1fr 1fr;
+}
+.maclogo{
+  justify-self: center;
+  align-self: end;
+}
+.textlogin{
+  justify-self: center;
+ 
+}

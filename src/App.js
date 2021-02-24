@@ -1,15 +1,20 @@
-import Mwindow from './components/Mwindow'
-import Docks from './components/Docks'
+import MainPage from "./components/MainPage";
+import PageLoader from "./components/PageLoader"
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 function App() {
   return (
-    <div className="App">
-      <nav>Nav</nav>
-      <div className="Mwin1"><Mwindow /></div>
-    <div className="Mwin2"><Mwindow /></div>
-    
-    <Docks/>
-    </div>
+    <>
+
+    <Router>
+    <Switch>
+    <Route path="/" exact component={PageLoader}/>
+    <Route path="/main" component={MainPage}/>
+    </Switch>
+    </Router>
+  </>
+
   );
+
 }
 
 export default App;
