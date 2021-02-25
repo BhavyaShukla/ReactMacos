@@ -29,7 +29,7 @@ const PageLoader = () => {
           width="200px"
         />
          <center><Link to="/main"><Button margin="10px 10px" color="blue" >
-        Press me!
+        Login!
         </Button></Link></center>
         </div>
       </div>

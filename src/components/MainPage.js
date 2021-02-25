@@ -1,18 +1,22 @@
-import React from "react";
+import React,{useState} from "react";
 import Mwindow from "./Mwindow";
 import Docks from "./Docks";
+import maclogo from "./images/blackapple.png"
 const MainPage = () => {
+  const [showWindow,setWindowShow]=useState(false)
+ 
   return (
     <div className="App">
-      <nav>Nav</nav>
+      <nav><img src={maclogo} width="22px" height="25px" style={{margin:"4px 10px"}} alt=""/></nav>
       <div className="Mwin1">
-        <Mwindow />
+       {showWindow && <Mwindow showWindow setWindowShow={setWindowShow}/>} 
+       
       </div>
       <div className="Mwin2">
-        <Mwindow />
+      
       </div>
 
-      <Docks />
+      <Docks showWindow setWindowShow={setWindowShow}  />
     </div>
   );
 };

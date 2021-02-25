@@ -3,14 +3,16 @@ import { Window, TitleBar, Text } from "react-desktop/macOs";
 import Folder from "./Folder";
 import Draggable from "react-draggable";
 
-const Mwindow = ({ color }) => {
-  const [show, setShow] = useState(true);
+const Mwindow = ({ color, showWindow ,setWindowShow }) => {
+ 
   const [resize, setResize] = useState(false);
-  const onClick = () => setShow(false);
+  const onClick = () => {
+     setWindowShow(!showWindow) 
+  }
 
   return (
-    <div>
-      {show ? (
+    <>
+    
         <Draggable handle=".resize">
           <Window
             color={color}
@@ -31,8 +33,8 @@ const Mwindow = ({ color }) => {
             <Folder label="Maddy" />
           </Window>
         </Draggable>
-      ) : null}
-    </div>
+    
+    </>
   );
 };
 Mwindow.defaultProps = {
